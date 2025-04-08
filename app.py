@@ -3,11 +3,11 @@ import pandas as pd
 import pickle
 import numpy as np
 
-label_encoder = pickle.load(open(r"F:\Guvi\Clickstream_customer_conversion\le2_clothing_model.pkl", 'rb'))
-classifier = pickle.load(open(r"F:\Guvi\Clickstream_customer_conversion\random_forest_classifier_model.pkl", 'rb'))
-regressor = pickle.load(open(r"F:\Guvi\Clickstream_customer_conversion\gradient_boosting_model.pkl", 'rb'))
-regressor_scaler = pickle.load(open(r"F:\Guvi\Clickstream_customer_conversion\regression_standard_scaler.pkl", 'rb'))
-classifier_scaler = pickle.load(open(r"F:\Guvi\Clickstream_customer_conversion\classification_standard_scaler.pkl", 'rb'))
+classifier = pickle.load(open("random_forest_classifier_model.pkl", 'rb'))
+regressor = pickle.load(open("gradient_boosting_model.pkl", 'rb'))
+regressor_scaler = pickle.load(open("regression_standard_scaler.pkl", 'rb'))
+classifier_scaler = pickle.load(open("classification_standard_scaler.pkl", 'rb'))
+label_encoder = pickle.load(open("label_encoder.pkl", 'rb'))
 
 st.set_page_config(layout="wide")
 st.title("Clickstream App")
